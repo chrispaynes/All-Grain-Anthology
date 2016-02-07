@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The All Grain Anthology</title>
+<script src="https://use.typekit.net/gmc7zkv.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!--       <link rel="stylesheet" href="docsupport/style.css">
+  <link rel="stylesheet" href="chosen.css"> -->
+        <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+
+  </head>
+
+  <body>
+
+<header class="site-header">
+<nav class="header_nav-wrapper">
+                     <li class="header_nav-logo">LOGO</li>
+                     <li class="header_nav-link"><a href="<%= static_path(@conn, "/troubleshoot") %>">Troubleshooting</a></li>
+                     <li class="header_nav-link"><a href="<%= static_path(@conn, "/process") %>">Process Tutorials</a></li>
+                     <li class="header_nav-link"><a href="<%= static_path(@conn, "/levelingup") %>">Leveling Up</a></li>
+                     <li class="header_nav-link"><a href="<%= static_path(@conn, "/ingredients") %>">Ingredients</a></li>
+                     <li class="header_nav-link"><a href="<%= static_path(@conn, "/explanations") %>">Explanations</a></li>
+</nav>
+
+<section class="header_content-wrapper">
+                     <div class="header_wrapper-logo">
+                     <li class="header_logo-text">
+                      <span class="header_nav-vertlogo header_nav-all">ALL</span>
+                      <span class="header_nav-vertlogo header_nav-grain">GRAIN</span>
+                      <span class="header_nav-vertlogo header_nav-anthology">ANTHOLOGY</span>
+                     </li>
+                     <li class="header_byline">by Chris Paynes and<br> the Open-Source Community</li>
+                     </div>
+
+                     <div class="header_wrapper-content">
+                     <li class="header_tagline"> \Tagline\ <br> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum socii</li>
+                     <li class="header_description">\Description\<br>Morbi fringilla justo eu elementum pellentesque. Duis sagittis elit diam, et iaculis nisl porta ut. Duis sagittis elit diam, et iaculis nisl porta ut. Sed id maximus mauris, nec feugiat quam. </li>
+                     <li class="header_searchbox">Searchbox</li>
+                    </div>
+
+</section>
+
+</header>
+
+
+
+      <%= render @view_module, @view_template, assigns %>
+
+      <footer class="footer_content-wrapper">
+                     <div class="footer_wrapper-logo">
+                     <li class="footer_topic-item">
+                       <img class="footer_summary-image"></img>
+                       <p class="footer_summary-topic">EXPLORATION TOPIC</p>
+                       <p class="footer_summary-body">Etiam convallis at erat pellentesque pharetra. In posuere eros a urna condimentum blandit vitae ut nisi. Curabitur bibendum eros vel arcu scelerisque egestas. Fusce quis mauris non elit venenatis laoreet sed sit amet erat. Praesent ac metus suscipit, mollis eros nec, dignissim libero.</p>
+                     </li>
+                                          <li class="footer_topic-item">
+                       <img class="footer_summary-image"></img>
+                       <p class="footer_summary-topic">EXPLORATION TOPIC</p>
+                       <p class="footer_summary-body">Etiam convallis at erat pellentesque pharetra. In posuere eros a urna condimentum blandit vitae ut nisi. Curabitur bibendum eros vel arcu scelerisque egestas. Fusce quis mauris non elit venenatis laoreet sed sit amet erat. Praesent ac metus suscipit, mollis eros nec, dignissim libero.</p>
+                     </li>
+                                          <li class="footer_topic-item">
+                       <img class="footer_summary-image"></img>
+                       <p class="footer_summary-topic">EXPLORATION TOPIC</p>
+                       <p class="footer_summary-body">Etiam convallis at erat pellentesque pharetra. In posuere eros a urna condimentum blandit vitae ut nisi. Curabitur bibendum eros vel arcu scelerisque egestas. Fusce quis mauris non elit venenatis laoreet sed sit amet erat. Praesent ac metus suscipit, mollis eros nec, dignissim libero.</p>
+                     </li>
+                     </div>
+
+</footer>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+
+    <script src="<%= static_path(@conn, "/js/jquery-2.1.4.min.js") %>"></script>
+  <script src="<%= static_path(@conn, "/js/chosen.jquery.js") %>"></script>
+  <script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+  </script>
+  </body>
+</html>
